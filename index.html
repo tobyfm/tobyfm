@@ -38,6 +38,10 @@
             border-radius: 5px;
             text-align: left;
         }
+        .experience-indent {
+            display: block;
+            margin-left: 40px; /* Adjust as needed */
+        }
     </style>
 </head>
 <body>
@@ -47,6 +51,7 @@
     <div class="tab-container">
         <div class="tab active" onclick="showTab('about')">About</div>
         <div class="tab" onclick="showTab('projects')">Projects</div>
+        <div class="tab" onclick="showTab('readingList')">Reading List</div>
     </div>
 
     <div id="about" class="content active">
@@ -55,14 +60,11 @@
 
         <h2>Previously:</h2>
         <p>Columbia grad,<br>
-            &#9;- B.A. Financial Economics; Gained strategy and investing experience in Morningside Investments and VC &amp; Entrepeneurship clubs.
+            <span class="experience-indent">- B.A. Financial Economics; Gained strategy and investing experience in Morningside Investments and VC &amp; Entrepeneurship clubs.</span>
         </p>
         <p>Asset Management Analyst<br>
-            &#9;- Helped allocate capital and manage assets for single family office with &gt;$400MM AUM
+            <span class="experience-indent">- Helped allocate capital and manage assets for single family office with &gt;$400MM AUM</span>
         </p>
-
-        <h2>Reading:</h2>
-        <p>Understanding Healthcare Delivery Science - Stevens</p>
 
         <h2>Contact:</h2>
         <p>tobyfordmonroe@gmail.com</p>
@@ -85,6 +87,11 @@
             <h3>Substack</h3>
             <p>Some stock writeups & opinion pieces</p>
         </div>
+    </div>
+
+    <div id="readingList" class="content">
+        <h2>Reading</h2>
+        <p>Understanding Healthcare Delivery Science - Stevens</p>
     </div>
 
     <script>
