@@ -7,72 +7,94 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            text-align: center;
             margin: 20px;
-            color: #333;
         }
-        h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
-        h2 {
-            font-size: 24px;
-            margin-top: 30px;
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            border-bottom: 2px solid transparent;
         }
-        ul {
-            list-style-type: none;
-            padding: 20;
+        .tab.active {
+            border-bottom: 2px solid blue;
+            font-weight: bold;
         }
-        li {
-            list-style-type: none;
-            margin-bottom: 10px;
+        .content {
+            display: none;
         }
-        a {
-            color: #0077cc;
-            text-decoration: none;
+        .content.active {
+            display: block;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        .social-icons img {
-            width: 24px;
-            margin-right: 10px;
+        .project {
+            background: #f4f4f4;
+            padding: 10px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 5px;
+            text-align: left;
         }
     </style>
 </head>
 <body>
+
     <h1>Toby Ford-Monroe</h1>
-    
-    <h2>Current</h2>
-    <p>VC at Hanwha Asset Management (USA)</p>
 
-    <h2>Previously:</h2>
-    
-        <li>Columbia grad</li>
-            <ul>
-            <li>  -Financial Economics. Gained strategy and investing experience in Morningside Investments and VC & Entrepeneurship clubs</li>
-            </ul>
-        <li>Asset Management Analyst</li>
-        <ul>
-            <li>  -Helped allocate capital and manage assets for single family office with >$400MM AUM</li>
-        </ul>
-
-
-    <h2>Reading:</h2>
-    <p>Understanding Healthcare Delivery Science - Stevens <br>The Innovator’s Prescription - Christensen</p>
-
-    <h2>Contact:</h2>
-    <p>tobyfordmonroe@gmail.com</p>
-    <div class="social-icons">
-       <a href="https://www.linkedin.com/in/tobyfordmonroe/" target="_blank">
-        <img src="linkedin-icon.png" width="26" height="26">
-    </a>
-    <a href="https://twitter.com/tobyfordmonroe" target="_blank">
-        <img src="twitter-icon.png" width="28" height="28">
-    </a>
-    <a href="https://www.instagram.com/toby_fm/" target="_blank">
-        <img src="instagram-icon.png" width="24" height="24">
-    </a>
+    <div class="tab-container">
+        <div class="tab active" onclick="showTab('about')">About</div>
+        <div class="tab" onclick="showTab('projects')">Projects</div>
     </div>
+
+    <div id="about" class="content active">
+        <h2>Current</h2>
+        <p>VC at Hanwha Asset Management (USA)</p>
+
+        <h2>Previously:</h2>
+        <p>Columbia grad, financial economics, experience in investing and startups.</p>
+
+        <h2>Reading:</h2>
+        <p>Understanding Healthcare Delivery Science - Stevens</p>
+
+        <h2>Contact:</h2>
+        <p>tobyfordmonroe@gmail.com</p>
+        <a href="https://www.linkedin.com/in/tobyfordmonroe/" target="_blank">LinkedIn</a> |
+        <a href="https://twitter.com/tobyfordmonroe" target="_blank">Twitter</a> |
+        <a href="https://www.instagram.com/toby_fm/" target="_blank">Instagram</a>
+    </div>
+
+    <div id="projects" class="content">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>AI Benchmark</h3>
+            <p>Developed a question set to evaluate the reasoning ability of LLMs</p>
+        </div>
+        <div class="project">
+            <h3>Hold'em Scenario Generator</h3>
+            <p>Built an app to drill proper decision making in poker.</p>
+        </div>
+        <div class="project">
+            <h3>Substack</h3>
+            <p>Some stock writeups & opinion pieces</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
