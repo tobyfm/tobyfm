@@ -6,7 +6,7 @@
     <title>Toby Ford-Monroe</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Times New Roman", serif;
             margin: 20px;
         }
         .tab-container {
@@ -40,7 +40,19 @@
         }
         .experience-indent {
             display: block;
-            margin-left: 40px; /* Adjust as needed */
+            margin-left: 40px;
+        }
+        .reading-list {
+            font-size: 14px;
+        }
+        .previous-section {
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -92,15 +104,36 @@
 
     <div id="readingList" class="content">
         <h2>Books</h2>
-        <p>Understanding Healthcare Delivery Science - Stevens</p>
-        <p>Oil - Smil</p>
-        <p>Fooled by Randomness - Taleb</p>
+        <div class="reading-list">
+            <p><em>Oil</em> - Smil</p>
+            <p><em>Understanding Healthcare Delivery Science</em> - Stevens</p>
+        </div>
+        <div class="previous-section" onclick="toggleDropdown('previous-books')">Previous ▼</div>
+        <div class="dropdown-content" id="previous-books">
+            <p><em>Fooled by Randomness</em> - Taleb</p>
+            <p><em>Distressed Debt Investing</em> - Whitman</p>
+            <p><em>Venture Mindset</em> - Olsen</p>
+            <p><em>The Power Law</em> - Mallaby</p>
+            <p><em>Going Infinite</em> - Lewis</p>
+            <p><em>Modern Poker Theory</em> - Acevedo</p>
+            <p><em>Poor Charlie's Almanack</em> - Munger</p>
+            <p><em>The Beginning of Infinity</em> - Deutsch</p>
+            <p><em>Building the H-Bomb</em> - Hafner</p>
+            <p><em>Alibaba</em> - Clark</p>
+            <p><em>Venture Deals</em> - Feld, Mendelson</p>
+        </div>
         <h2>Papers/Docs</h2>
-        <p>Foundations of Large Language Models - Xiao, Zhu</p>
-        <p>Agency Is Frame-Dependent - Abel</p>
-        <p>Scaling LLM Test-Time Compute - Snell</p>
-        <p>The Unreasonable Effectiveness of RNNs - Karpathy</p>
-
+        <div class="reading-list">
+            <p><em>Scaling Laws for Neural Language Models</em> - Kaplan et al.</p>
+        </div>
+        <div class="previous-section" onclick="toggleDropdown('previous-papers')">Previous ▼</div>
+        <div class="dropdown-content" id="previous-papers">
+            <p><em>DeepStack: Expert-Level Artificial Intelligence in Heads-Up No-Limit Poker</em> - Moravčík et al.</p>
+            <p><em>Understanding LSTM Networks</em> - Olah</p>
+            <p><em>Foundations of Large Language Models</em> - Xiao, Zhu</p>
+            <p><em>Scaling LLM Test-Time Compute</em> - Snell</p>
+            <p><em>The Unreasonable Effectiveness of RNNs</em> - Karpathy</p>
+        </div>
     </div>
 
     <script>
@@ -113,6 +146,11 @@
             });
             document.getElementById(tabName).classList.add('active');
             document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
+        }
+        
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            content.style.display = content.style.display === "block" ? "none" : "block";
         }
     </script>
 
