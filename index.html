@@ -30,14 +30,6 @@
         .content.active {
             display: block;
         }
-        .project {
-            background: #f4f4f4;
-            padding: 10px;
-            margin: 10px 0;
-            width: 80%;
-            border-radius: 5px;
-            text-align: left;
-        }
         .experience-indent {
             display: block;
             margin-left: 40px;
@@ -46,13 +38,7 @@
             font-size: 14px;
         }
         .previous-section {
-            font-weight: bold;
             font-size: 14px;
-            cursor: pointer;
-        }
-        .dropdown-content {
-            display: none;
-            margin-top: 10px;
         }
     </style>
 </head>
@@ -71,7 +57,7 @@
         <p>VC at Hanwha Asset Management (USA)</p>
             <span class="experience-indent">-Generalist fund; series A-C, check size $2-15MM</span>
 
-        <h2>Previously:</h2>
+        <h2>Previously</h2>
         <p>Columbia grad</p>
             <span class="experience-indent">-B.A. Financial Economics; Gained strategy and investing experience in Morningside Investments and VC &amp; Entrepeneurship clubs</span>
         </p>
@@ -79,7 +65,7 @@
             <span class="experience-indent">-Helped allocate capital and manage assets for single family office with &gt;$400MM AUM</span>
         </p>
 
-        <h2>Contact:</h2>
+        <h2>Contact</h2>
         <p>tobyfordmonroe@gmail.com</p>
         <a href="https://www.linkedin.com/in/tobyfordmonroe/" target="_blank">LinkedIn</a> |
         <a href="https://twitter.com/tobyfordmonroe" target="_blank">Twitter</a> |
@@ -88,18 +74,18 @@
 
     <div id="projects" class="content">
         <h2>Projects</h2>
-        <div class="project">
-            <h3>AI Benchmark</h3>
-            <p>Developed a question set to evaluate the reasoning ability of LLMs</p>
-        </div>
-        <div class="project">
-            <h3>Hold'em Scenario Generator</h3>
-            <p>Built an app to drill proper decision making in poker.</p>
-        </div>
-        <div class="project">
-            <h3>Substack</h3>
-            <p>Some stock writeups & opinion pieces</p>
-        </div>
+        <p>AI Benchmark</p>
+            <span class="experience-indent">-Developed a question set to evaluate the reasoning ability of LLMs</span>
+        </p>
+        <p>Hold'em Scenario Generator</p>
+            <span class="experience-indent">-Built an app to drill proper decision making in poker</span>
+        </p>
+        <p>GRFL Home Services</p>
+            <span class="experience-indent">-Co-Founder of home services company, achieving $112,000 in ARR within 3 months of launch</span>
+        </p>
+        <p>Substack</p>
+            <span class="experience-indent">-Some stock writeups & opinion pieces</span>
+        </p>
     </div>
 
     <div id="readingList" class="content">
@@ -107,33 +93,14 @@
         <div class="reading-list">
             <p><em>Oil</em> - Smil</p>
             <p><em>Understanding Healthcare Delivery Science</em> - Stevens</p>
+            <p><em>Focus: The ASML Way</em> - Hijink</p>
         </div>
-        <div class="previous-section" onclick="toggleDropdown('previous-books')">Previous ▼</div>
-        <div class="dropdown-content" id="previous-books">
-            <p><em>Fooled by Randomness</em> - Taleb</p>
-            <p><em>Distressed Debt Investing</em> - Whitman</p>
-            <p><em>Venture Mindset</em> - Olsen</p>
-            <p><em>The Power Law</em> - Mallaby</p>
-            <p><em>Going Infinite</em> - Lewis</p>
-            <p><em>Modern Poker Theory</em> - Acevedo</p>
-            <p><em>Poor Charlie's Almanack</em> - Munger</p>
-            <p><em>The Beginning of Infinity</em> - Deutsch</p>
-            <p><em>Building the H-Bomb</em> - Hafner</p>
-            <p><em>Alibaba</em> - Clark</p>
-            <p><em>Venture Deals</em> - Feld, Mendelson</p>
-        </div>
+        <p class="previous-section"><a href="previous.html" target="_blank">Previous</a></p>
         <h2>Papers/Docs</h2>
         <div class="reading-list">
             <p><em>Scaling Laws for Neural Language Models</em> - Kaplan et al.</p>
         </div>
-        <div class="previous-section" onclick="toggleDropdown('previous-papers')">Previous ▼</div>
-        <div class="dropdown-content" id="previous-papers">
-            <p><em>DeepStack: Expert-Level Artificial Intelligence in Heads-Up No-Limit Poker</em> - Moravčík et al.</p>
-            <p><em>Understanding LSTM Networks</em> - Olah</p>
-            <p><em>Foundations of Large Language Models</em> - Xiao, Zhu</p>
-            <p><em>Scaling LLM Test-Time Compute</em> - Snell</p>
-            <p><em>The Unreasonable Effectiveness of RNNs</em> - Karpathy</p>
-        </div>
+        <p class="previous-section"><a href="previous.html" target="_blank">Previous</a></p>
     </div>
 
     <script>
@@ -146,11 +113,6 @@
             });
             document.getElementById(tabName).classList.add('active');
             document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
-        }
-        
-        function toggleDropdown(id) {
-            var content = document.getElementById(id);
-            content.style.display = content.style.display === "block" ? "none" : "block";
         }
     </script>
 
