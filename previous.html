@@ -3,98 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previous Reads</title>
+    <title>Previous</title>
     <style>
         body {
             font-family: "Times New Roman", serif;
             margin: 20px;
-            padding: 20px;
-        }
-        h1 {
-            text-align: left;
-        }
-        .container {
-            display: flex;
-            align-items: flex-start;
+            padding: 10px;
         }
         .reading-list {
-            width: 70%;
-            font-size: 16px;
+            font-size: 14px;
+            max-width: 700px;
+            margin: auto;
         }
-        .categories {
-            width: 30%;
-            text-align: right;
-            padding-top: 20px;
+        h2, h3 {
+            margin-bottom: 5px;
+            margin-top: 15px;
         }
-        .categories h3 {
-            margin: 0;
-            padding: 10px 0;
-        }
-        .section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        p {
+            margin: 2px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Previous Reads</h1>
-    
-    <div class="container">
-        <div class="reading-list">
-            <h2>Books</h2>
-            <div class="section"><h3>Strategy</h3></div>
-            <p><em>Zero to One</em> - Thiel</p>
-            <p><em>Getting Things Done</em> - Allen</p>
-            <p><em>Secrets of Sand Hill Road</em> - Horowitz</p>
-            <p><em>Impro</em> - Johnstone</p>
-            <p><em>Interviewing Users</em> - Portigal</p>
-            <p><em>Alibaba</em> - Clark</p>
-            
-            <div class="section"><h3>Investing</h3></div>
-            <p><em>Capital Allocators</em> - Seides</p>
-            <p><em>Advanced Portfolio Management</em> - Giuseppe Andrea Paleologo</p>
-            <p><em>Distressed Debt Investing</em> - Whitman</p>
-            <p><em>The Power Law</em> - Mallaby</p>
-            <p><em>Venture Deals</em> - Feld, Mendelson</p>
-            
-            <div class="section"><h3>Misc</h3></div>
-            <p><em>Structures</em> - Gordon</p>
-            <p><em>Borges on Writing</em> - Borges</p>
-            <p><em>Supercapitalism</em> - Reich</p>
-            <p><em>The Looming Tower</em> - Wright</p>
-            <p><em>Fooled by Randomness</em> - Taleb</p>
-            <p><em>Going Infinite</em> - Lewis</p>
-            <p><em>Modern Poker Theory</em> - Acevedo</p>
-            <p><em>Poor Charlie's Almanack</em> - Munger</p>
-            <p><em>The Beginning of Infinity</em> - Deutsch</p>
-            <p><em>Building the H-Bomb</em> - Kenneth Ford</p>
-            
-            <h2>Papers/Docs</h2>
-            <div class="section"><h3>Macroeconomics</h3></div>
-            <p><em>Business Cycle Fluctuations in U.S. Macroeconomic Time Series</em> - Stock & Watson</p>
-            <p><em>The Nation in Depression</em> - Romer</p>
-            <p><em>A Tale of Two Depressions</em> - Eichengreen, O’Rourke (2009)</p>
-            <p><em>Changes in Business Cycles: Evidence and Explanations</em> - Romer (1999)</p>
-            <p><em>The New Tools of Monetary Policy</em> - Bernanke (2020)</p>
-            <p><em>Fiscal Stimulus in a Monetary Union: Evidence from US Regions</em> - Nakamura, Steinsson</p>
-            
-            <div class="section"><h3>Econometrics</h3></div>
-            <p><em>An Overview of Regressions</em> - Romer (2020)</p>
-            <p><em>Does Monetary Policy Matter? A New Test in the Spirit of Friedman and Schwartz</em> - Romer & Romer (1989)</p>
-            <p><em>Monetary Policy Communications and Their Effects on Household Inflation Expectations</em> - Coibion, Gorodnichenko, Weber</p>
-            <p><em>The Voice of Monetary Policy</em> - Gorodnichenko, Pham, Talavera</p>
-            <p><em>Consumer Spending and the Economic Stimulus Payments of 2008</em> - Parker, Souleles, Johnson, McClelland</p>
-            <p><em>Economic Uncertainty Before and During the COVID-19 Pandemic</em> - Altig, Baker, Barrero, Bloom et al.</p>
-            
-            <div class="section"><h3>Machine Learning</h3></div>
-            <p><em>Foundations of Large Language Models</em> - Xiao, Zhu</p>
-            <p><em>Scaling LLM Test-Time Compute</em> - Snell</p>
-            <p><em>The Unreasonable Effectiveness of RNNs</em> - Karpathy</p>
+    <div class="reading-list">
+        <h2>Books</h2>
+        
+        <h3>Strategy</h3>
+        <p><em>Zero to One</em> - Thiel</p>
+        <p><em>Secrets of Sand Hill Road</em> - Horowitz</p>
+        <p><em>Impro</em> - Johnstone</p>
+        <p><em>Interviewing Users</em> - Portigal</p>
+        <p><em>Alibaba</em> - Clark</p>
+        
+        <h3>Investing</h3>
+        <p><em>Capital Allocators</em> - Seides</p>
+        <p><em>Advanced Portfolio Management</em> - Giuseppe Andrea Paleologo</p>
+        <p><em>Distressed Debt Investing</em> - Whitman</p>
+        <p><em>The Power Law</em> - Mallaby</p>
+        <p><em>Venture Deals</em> - Feld, Mendelson</p>
+        
+        <h3>Misc</h3>
+        <p><em>Getting Things Done</em> - Allen</p>
+        <p><em>Structures</em> - Gordon</p>
+        <p><em>Borges on Writing</em> - Borges</p>
+        <p><em>Supercapitalism</em> - Reich</p>
+        <p><em>The Looming Tower</em> - Wright</p>
+        <p><em>Fooled by Randomness</em> - Taleb</p>
+        <p><em>Going Infinite</em> - Lewis</p>
+        <p><em>Modern Poker Theory</em> - Acevedo</p>
+        <p><em>Poor Charlie's Almanack</em> - Munger</p>
+        <p><em>The Beginning of Infinity</em> - Deutsch</p>
+        <p><em>Building the H-Bomb</em> - Ford</p>
+        
+        <h2>Papers/Docs</h2>
+        
+        <h3>Macroeconomics</h3>
+        <p><em>Business Cycle Fluctuations in U.S. Macroeconomic Time Series</em> - Stock & Watson</p>
+        <p><em>The Nation in Depression</em> - Romer</p>
+        <p><em>A Tale of Two Depressions</em> - Eichengreen, O’Rourke (2009)</p>
+        <p><em>Changes in Business Cycles: Evidence and Explanations</em> - Romer (1999)</p>
+        <p><em>The New Tools of Monetary Policy</em> - Bernanke (2020)</p>
+        <p><em>Fiscal Stimulus in a Monetary Union: Evidence from US Regions</em> - Nakamura, Steinsson</p>
+        
+        <h3>Econometrics</h3>
+        <p><em>An Overview of Regressions</em> - Romer (2020)</p>
+        <p><em>Does Monetary Policy Matter? A New Test in the Spirit of Friedman and Schwartz</em> - Romer & Romer (1989)</p>
+        <p><em>Monetary Policy Communications and Their Effects on Household Inflation Expectations</em> - Coibion, Gorodnichenko, Weber</p>
+        <p><em>The Voice of Monetary Policy</em> - Gorodnichenko, Pham, Talavera</p>
+        <p><em>Consumer Spending and the Economic Stimulus Payments of 2008</em> - Parker, Souleles, Johnson, McClelland</p>
+        <p><em>Economic Uncertainty Before and During the COVID-19 Pandemic</em> - Altig, Baker, Barrero, Bloom et al.</p>
+        
+        <h3>Machine Learning</h3>
+        <p><em>Foundations of Large Language Models</em> - Xiao, Zhu</p>
+        <p><em>Scaling LLM Test-Time Compute</em> - Snell</p>
+        <p><em>The Unreasonable Effectiveness of RNNs</em> - Karpathy</p>
         <p><em>DeepStack: Expert-Level Artificial Intelligence in Heads-Up No-Limit Poker</em> - Moravčík et al.</p>
-            <p><em>Understanding LSTM Networks</em> - Olah</p>
-        </div>
+        <p><em>Understanding LSTM Networks</em> - Olah</p>
     </div>
+    
     <p style="text-align: left;"><a href="index.html">Back to Main Page</a></p>
 </body>
 </html>
