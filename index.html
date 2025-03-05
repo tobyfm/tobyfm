@@ -9,36 +9,12 @@
             font-family: "Times New Roman", serif;
             margin: 20px;
         }
-        .tab-container {
-            display: flex;
-            justify-content: flex-start;
-            margin-bottom: 20px;
-        }
-        .tab {
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            border-bottom: 2px solid transparent;
-        }
-        .tab.active {
-            border-bottom: 2px solid blue;
-            font-weight: bold;
-        }
-        .content {
-            display: none;
-        }
-        .content.active {
-            display: block;
-        }
         .experience-indent {
             display: block;
             margin-left: 40px;
         }
-        .reading-list {
-            font-size: 14px;
-        }
-        .previous-section {
-            font-size: 14px;
+        a {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -46,75 +22,29 @@
 
     <h1>Toby Ford-Monroe</h1>
 
-    <div class="tab-container">
-        <div class="tab active" onclick="showTab('about')">About</div>
-        <div class="tab" onclick="showTab('projects')">Projects</div>
-        <div class="tab" onclick="showTab('readingList')">Reading</div>
-    </div>
+    <h2>Current</h2>
+    <p>About to start full-time as VC @ Hanwha</p>
 
-    <div id="about" class="content active">
-        <h2>Current</h2>
-        <p>VC at Hanwha Asset Management (USA)</p>
-            <span class="experience-indent">-Generalist fund; series A-C, check size $2-15MM</span>
+    <h2>Previously</h2>
+    <p>Summer Analyst, VC at Hanwha Asset Management (USA)</p>
+        <span class="experience-indent">- Generalist fund; Series A–C, check size $2–15MM</span>
+    </p>
+    <p>Columbia</p>
+        <span class="experience-indent">- B.A. Financial Economics; Gained strategy and investing experience in Morningside Investments and VC & Entrepreneurship clubs</span>
+    </p>
+    <p>Asset Management Analyst</p>
+        <span class="experience-indent">- Helped allocate capital and manage assets for single-family office with &gt;$400MM AUM</span>
+    </p>
 
-        <h2>Previously</h2>
-        <p>Columbia grad</p>
-            <span class="experience-indent">-B.A. Financial Economics; Gained strategy and investing experience in Morningside Investments and VC &amp; Entrepeneurship clubs</span>
-        </p>
-        <p>Asset Management Analyst</p>
-            <span class="experience-indent">-Helped allocate capital and manage assets for single family office with &gt;$400MM AUM</span>
-        </p>
+    <h2>Other</h2>
+    <p><a href="projects.html">Projects</a></p>
+    <p><a href="reading.html">Reading</a></p>
 
-        <h2>Contact</h2>
-        <p>tobyfordmonroe@gmail.com</p>
-        <a href="https://www.linkedin.com/in/tobyfordmonroe/" target="_blank">LinkedIn</a> |
-        <a href="https://twitter.com/tobyfordmonroe" target="_blank">Twitter</a> |
-        <a href="https://www.instagram.com/toby_fm/" target="_blank">Instagram</a>
-    </div>
-
-    <div id="projects" class="content">
-        <h2>Projects</h2>
-        <p>AI Benchmark</p>
-            <span class="experience-indent">-Developed a question set to evaluate the reasoning ability of LLMs</span>
-        </p>
-        <p>Hold'em Scenario Generator</p>
-            <span class="experience-indent">-Built an app to drill proper decision making in poker</span>
-        </p>
-        <p>GRFL Home Services</p>
-            <span class="experience-indent">-Co-Founder of home services company, achieving $112,000 in ARR within 3 months of launch</span>
-        </p>
-        <p>Substack</p>
-            <span class="experience-indent">-Some stock writeups & opinion pieces</span>
-        </p>
-    </div>
-
-    <div id="readingList" class="content">
-        <h2>Books</h2>
-        <div class="reading-list">
-            <p><em>Oil</em> - Smil</p>
-            <p><em>Understanding Healthcare Delivery Science</em> - Stevens</p>
-            <p><em>Focus: The ASML Way</em> - Hijink</p>
-        </div>
-        <p class="previous-section"><a href="previous.html" target="_blank">Previous</a></p>
-        <h2>Papers/Docs</h2>
-        <div class="reading-list">
-            <p><em>Scaling Laws for Neural Language Models</em> - Kaplan et al.</p>
-        </div>
-        <p class="previous-section"><a href="previous.html" target="_blank">Previous</a></p>
-    </div>
-
-    <script>
-        function showTab(tabName) {
-            document.querySelectorAll('.content').forEach(content => {
-                content.classList.remove('active');
-            });
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.getElementById(tabName).classList.add('active');
-            document.querySelector(`.tab[onclick="showTab('${tabName}')"]`).classList.add('active');
-        }
-    </script>
+    <h2>Contact</h2>
+    <p>tobyfordmonroe@gmail.com</p>
+    <a href="https://www.linkedin.com/in/tobyfordmonroe/" target="_blank">LinkedIn</a> |
+    <a href="https://twitter.com/tobyfordmonroe" target="_blank">Twitter</a> |
+    <a href="https://www.instagram.com/toby_fm/" target="_blank">Instagram</a>
 
 </body>
 </html>
